@@ -1,0 +1,275 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Light theme - Frost/Ice theme com aspecto profissional e moderno */
+:root {
+  /* Bases Neutras com toque frio (H=210) para aspecto tecnológico */
+  --background: oklch(0.99 0.004 210);
+  --foreground: oklch(0.15 0.01 210);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.01 210);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.01 210);
+
+  /* Primary: Cyan/Ice Blue - identidade "Frostify" (H=200 = cyan vibrante) */
+  /* L=0.52 garante contraste WCAG AA com texto branco */
+  --primary: oklch(0.52 0.14 200);
+  --primary-foreground: oklch(0.99 0 0);
+
+  /* Secondary: Azul acinzentado muito suave */
+  --secondary: oklch(0.96 0.008 210);
+  --secondary-foreground: oklch(0.30 0.04 210);
+
+  /* Muted: Para textos secundários e fundos sutis */
+  --muted: oklch(0.96 0.008 210);
+  --muted-foreground: oklch(0.48 0.02 210);
+
+  /* Accent: Para hovers e interações - cyan mais vibrante */
+  --accent: oklch(0.95 0.02 200);
+  --accent-foreground: oklch(0.30 0.08 200);
+
+  /* Destructive: Vermelho equilibrado */
+  --destructive: oklch(0.55 0.18 25);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  /* Success: Verde esmeralda para ações positivas */
+  --success: oklch(0.55 0.14 150);
+  --success-foreground: oklch(0.99 0 0);
+
+  /* Warning: Amarelo/Amber para alertas */
+  --warning: oklch(0.65 0.15 80);
+  --warning-foreground: oklch(0.15 0.01 80);
+
+  /* Borders & Inputs */
+  --border: oklch(0.90 0.006 210);
+  --input: oklch(0.94 0.006 210);
+  --ring: oklch(0.52 0.14 200);
+  /* Match primary */
+
+  /* Charts: Paleta harmoniosa com tema frost */
+  --chart-1: oklch(41.904% 0.11531 248.901);
+  /* Cyan/Ice */
+  --chart-2: oklch(0.58 0.13 240);
+  /* Blue */
+  --chart-3: oklch(0.55 0.12 280);
+  /* Purple */
+  --chart-4: oklch(0.55 0.14 150);
+  /* Green */
+  --chart-5: oklch(0.60 0.15 60);
+  /* Warm accent */
+
+  --radius: 0.5rem;
+
+  /* Sidebar específica - tema frost */
+  --sidebar: oklch(0.98 0.004 210);
+  --sidebar-foreground: oklch(0.25 0.02 210);
+  --sidebar-primary: oklch(0.52 0.14 200);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.95 0.01 210);
+  --sidebar-accent-foreground: oklch(0.25 0.02 210);
+  --sidebar-border: oklch(0.90 0.006 210);
+  --sidebar-ring: oklch(0.52 0.14 200);
+
+  /* Status Colors - Refinados e consistentes */
+  /* Waiting: Amber profissional */
+  --status-waiting: oklch(0.68 0.14 80);
+  --status-waiting-bg: oklch(0.97 0.04 80);
+  --status-waiting-border: oklch(0.85 0.08 80);
+
+  /* Progress: Cyan (identidade Frostify) */
+  --status-progress: oklch(0.58 0.13 200);
+  --status-progress-bg: oklch(0.96 0.03 200);
+  --status-progress-border: oklch(0.82 0.08 200);
+
+  /* Completed: Verde Esmeralda */
+  --status-completed: oklch(0.58 0.13 150);
+  --status-completed-bg: oklch(0.96 0.04 150);
+  --status-completed-border: oklch(0.82 0.08 150);
+
+  /* Scheduled: Roxo/Lavanda */
+  --status-scheduled: oklch(0.58 0.12 280);
+  --status-scheduled-bg: oklch(0.97 0.03 280);
+  --status-scheduled-border: oklch(0.82 0.08 280);
+}
+
+/* Dark theme - "Frost Midnight" profundo com tons de cyan */
+.dark {
+  /* Bases Escuras Profundas (H=220 = midnight blue com toque de cyan) */
+  --background: oklch(0.13 0.025 220);
+  --foreground: oklch(0.96 0.008 220);
+
+  --card: oklch(0.16 0.025 220);
+  --card-foreground: oklch(0.96 0.008 220);
+
+  --popover: oklch(0.16 0.025 220);
+  --popover-foreground: oklch(0.96 0.008 220);
+
+  /* Primary em Dark Mode: Cyan brilhante para destacar no fundo escuro */
+  --primary: oklch(0.65 0.14 200);
+  --primary-foreground: oklch(0.10 0.02 220);
+
+  --secondary: oklch(0.22 0.025 220);
+  --secondary-foreground: oklch(0.92 0.008 220);
+
+  --muted: oklch(0.20 0.025 220);
+  --muted-foreground: oklch(0.68 0.015 220);
+
+  --accent: oklch(0.24 0.03 200);
+  --accent-foreground: oklch(0.96 0.008 220);
+
+  --destructive: oklch(0.60 0.18 25);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --success: oklch(0.60 0.14 150);
+  --success-foreground: oklch(0.99 0 0);
+
+  --warning: oklch(0.70 0.15 80);
+  --warning-foreground: oklch(0.10 0.02 80);
+
+  --border: oklch(0.26 0.025 220);
+  --input: oklch(0.20 0.025 220);
+  --ring: oklch(0.65 0.14 200);
+
+  --chart-1: oklch(0.65 0.14 200);
+  --chart-2: oklch(0.62 0.13 240);
+  --chart-3: oklch(0.60 0.12 280);
+  --chart-4: oklch(0.65 0.14 150);
+  --chart-5: oklch(0.68 0.15 60);
+
+  --sidebar: oklch(0.13 0.025 220);
+  --sidebar-foreground: oklch(0.92 0.008 220);
+  --sidebar-primary: oklch(0.65 0.14 200);
+  --sidebar-primary-foreground: oklch(0.10 0.02 220);
+  --sidebar-accent: oklch(0.20 0.025 220);
+  --sidebar-accent-foreground: oklch(0.92 0.008 220);
+  --sidebar-border: oklch(0.26 0.025 220);
+  --sidebar-ring: oklch(0.65 0.14 200);
+
+  /* Status Colors Dark Mode - Ajustados para legibilidade */
+  --status-waiting: oklch(0.75 0.14 80);
+  --status-waiting-bg: oklch(0.22 0.04 80);
+  --status-waiting-border: oklch(0.35 0.08 80);
+
+  --status-progress: oklch(0.72 0.13 200);
+  --status-progress-bg: oklch(0.22 0.04 200);
+  --status-progress-border: oklch(0.35 0.08 200);
+
+  --status-completed: oklch(0.68 0.13 150);
+  --status-completed-bg: oklch(0.20 0.04 150);
+  --status-completed-border: oklch(0.32 0.08 150);
+
+  --status-scheduled: oklch(0.72 0.12 280);
+  --status-scheduled-bg: oklch(0.22 0.04 280);
+  --status-scheduled-border: oklch(0.35 0.08 280);
+}
+
+@theme inline {
+  --font-sans: var(--font-raleway), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Success & Warning color tokens */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  /* Status color tokens */
+  --color-status-waiting: var(--status-waiting);
+  --color-status-waiting-bg: var(--status-waiting-bg);
+  --color-status-waiting-border: var(--status-waiting-border);
+  --color-status-progress: var(--status-progress);
+  --color-status-progress-bg: var(--status-progress-bg);
+  --color-status-progress-border: var(--status-progress-border);
+  --color-status-completed: var(--status-completed);
+  --color-status-completed-bg: var(--status-completed-bg);
+  --color-status-completed-border: var(--status-completed-border);
+  --color-status-scheduled: var(--status-scheduled);
+  --color-status-scheduled-bg: var(--status-scheduled-bg);
+  --color-status-scheduled-border: var(--status-scheduled-border);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Scrollbar discreta e suave */
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.5 0.01 260 / 0.3) transparent;
+  }
+
+  .dark * {
+    scrollbar-color: oklch(0.3 0.01 260) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: oklch(0.5 0.01 260 / 0.3);
+    border-radius: 3px;
+  }
+
+  .dark *::-webkit-scrollbar-thumb {
+    background-color: oklch(0.3 0.01 260);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(0.5 0.01 260 / 0.5);
+  }
+
+  .dark *::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(0.4 0.01 260);
+  }
+}
