@@ -20,19 +20,6 @@ O projeto está sendo desenvolvido utilizando as versões mais recentes e estáv
 
 ---
 
-## ✨ Funcionalidades Implementadas
-
-- [x] 🌓 **Dark/Light Mode:** Tema claro e escuro com transições suaves e cores de alto contraste.
-- [x] 📱 **Totalmente Responsivo:** Interface adaptável desde smartphones até desktops (Mobile First).
-- [x] 📊 **Dashboard Inteligente:** Visualização em tempo real de ordens de serviço por status e data.
-- [x] 👥 **Gestão de Clientes:** Cadastro completo com CPF/CNPJ, telefone e busca em tempo real.
-- [x] 🔧 **Ordens de Serviço:** Criação, edição e acompanhamento de status (Aguardando → Em Andamento → Concluído).
-- [x] ⏱️ **Timeline de Serviços:** Registro automático de horários agendados, início e conclusão.
-- [x] 🎨 **Design Moderno:** Interface glassmorphism com OKLCH color space para máxima fidelidade visual.
-- [x] ⚡ **Alta Performance:** Construído com Next.js 15 e React Server Components.
-
----
-
 ## 📋 Principais Funcionalidades
 
 ### 🎯 **Dashboard Inteligente**
